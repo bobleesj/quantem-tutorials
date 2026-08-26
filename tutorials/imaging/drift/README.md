@@ -24,6 +24,22 @@ The notebooks default to `INTERACTIVE = True`. Set it to `False` to use the
 same workflow with static figures. Device selection is automatic across CUDA,
 Apple MPS, and CPU and is shown by `profile()` near the top of each notebook.
 
+## Data credits
+
+All datasets were acquired at the Stanford Nano Shared Facilities
+(nano@stanford).
+
+| Dataset | Credit |
+| --- | --- |
+| Silicon HAADF | Silicon sample provided by Samsung Electronics Corporation. |
+| SrTiO₃ HAADF and XEDS | SrTiO₃ sample provided by Kevin Crust. |
+| WS₂ HAADF | Sample provider to be confirmed with William Millsaps. |
+| Co₃O₄ HAADF | Sample prepared by Jun Beom Hwang and Myoung Hwan Oh, KENTECH. |
+| Gold 4D-STEM | Acquired using the DECTRIS ARINA detector. |
+
+We thank Pinaki Mukherjee for TEM instrument support and Berk Küçükoğlu and
+Oliver Harder of DECTRIS for ARINA acquisition and automation support.
+
 ## Advanced tutorials
 
 The [`advanced/`](advanced/) folder exposes diagnostic and explicit-parameter
