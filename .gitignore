@@ -7,3 +7,6 @@ outputs/
 
 # GIT ignore .code-workspace
 *.code-workspace
+
+# Local acquisition notebooks and evidence
+_private*

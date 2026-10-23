@@ -1,0 +1,10 @@
+name: widget-mps
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - nodejs=22
+  - git
+  - jupyterlab
+  - ipykernel
