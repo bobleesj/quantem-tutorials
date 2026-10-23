@@ -12,7 +12,7 @@ Load your local H5/QEM data, browse with **Show4DSTEM**, then review SSB with
 **Manual:** enter your voltage, convergence semiangle and scan step, then fit detector sampling. Example values must be replaced.
 
 **Basic:** load, inspect calibration, view and export BF/DF/ADF and mean diffraction images, fit automatically, review and save.
-**Advanced:** the same automatic workflow, with a four-case rotation/defocus comparison,
+**Advanced:** the same automatic workflow, with a four-case rotation/defocus comparison of primary fits,
 matched phase images and histograms, regional fits, depth/tilt landscapes,
 and a compact reconstructed focus gallery. Search ranges and known higher-order corrections are optional.
 
