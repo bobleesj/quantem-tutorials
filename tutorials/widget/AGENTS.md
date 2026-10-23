@@ -25,6 +25,10 @@
   resolution, valid BF support or precision merely to pass a tutorial test.
 - Render each widget/report once using the cell's final expression. Use
   `(row, col)` coordinates and explicit units. Keep Auto output sampling.
+- The default fit shows an initial Auto phase, then replaces it with the final
+  jointly refined phase. Keep that progressive display enabled in tutorials;
+  do not add manual callback or plotting code. Use `show=False` for noninteractive
+  runs. Fit reports and convergence plots remain separate optional calls.
 - Follow quantem.widget's `docs/maintainer/display-api.md` for display naming:
   named `size` presets, default `"medium"`, and plain `rows` / `columns` where
   implemented. Size describes each image panel. Do not make beginner notebooks

@@ -36,16 +36,18 @@ share `size`, `cmap` and `save`; interactive focus views also accept `cmap`.
 `save` exports a figure; `save_dir` stores calibration. These options do not
 change scientific arrays.
 
-No dataset is downloaded and no aberration values are required. CUDA starts
-with `search="broad"`; use `"standard"` for primary optics plus tilt/depth.
-MPS uses `"standard"` while broad remains CUDA-only. Broad fits terms through
-fifth order; it does not certify that those coefficients are physical probe aberrations.
-Advanced notebooks expose an optional trial budget, standard-search bounds,
-rotation diagnostics and regional review.
+No dataset is downloaded and no aberration values are required:
 
-**Development checkpoint:** these calls require the search-modes GPU candidate.
-They are not yet available in the tested `origin/main` installation. Do not use
-this tutorial revision on an acquisition machine until integration is complete.
+```python
+fit = ssb.find_aberrations()                 # Initial 200 TPE → joint Newton through fifth order.
+fit = ssb.find_aberrations(search="broad")   # Add broader fifth-order exploration.
+```
+
+Use the returned fit for `fit.show("convergence")`,
+`ssb.reconstruct(fit, upsampling_factor="auto")`, and calibration export.
+Advanced notebooks expose the trial budget, refinement method and optional
+initial-only custom constraints (`search="primary"`). All models retain native
+fitting and Auto display sampling. Fitted high-order terms require physical validation.
 
 Keep experimental data, saved calibrations and private notebook outputs out
 of Git. Phase-polarity evidence is not an independent rotation measurement;
