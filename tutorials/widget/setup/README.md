@@ -3,6 +3,11 @@
 Use clean checkouts of the QuantEM forks’ `origin/main` and editable installs.
 This is a development setup, not an RC release. No TestPyPI step is needed.
 
+`DirectPtycho` and `run()` require the paired source versions: GPU
+`0.0.1rc18.dev0` and Widget `0.0.1rc44.dev0` or later. Earlier GPU `rc17`
+installs do not provide this API. Update and install both libraries together;
+these development versions do not imply a published package release.
+
 ## 1. Get the tutorials
 
 Install [Miniforge](https://github.com/conda-forge/miniforge#install), then run:
@@ -95,6 +100,8 @@ diverged branch, preserve the work before updating; do not reset it.
 
 ## Troubleshooting
 
+- Missing `DirectPtycho` or `run`: update both source checkouts together, then
+  reinstall and restart the kernel using the Update steps above.
 - Wrong environment: launch Jupyter after activating the matching environment.
 - No GPU: check the NVIDIA driver or use Apple silicon for MPS.
 - Blank/outdated widget: rebuild, restart the kernel, and reload the browser.

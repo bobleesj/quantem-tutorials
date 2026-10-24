@@ -36,15 +36,17 @@ share `size`, `cmap` and `save`; interactive focus views also accept `cmap`.
 `save` exports a figure; `save_dir` stores calibration. These options do not
 change scientific arrays.
 
-No dataset is downloaded and no aberration values are required:
+`DirectPtycho` owns loading, fitted optics and direct reconstruction; SSB is
+the default `run()` method. No dataset is downloaded and no aberration values
+are required:
 
 ```python
-fit = ssb.find_aberrations()                 # Initial 200 TPE → joint Newton through fifth order.
-fit = ssb.find_aberrations(search="broad")   # Add broader fifth-order exploration.
+fit = ptycho.find_aberrations()                 # Initial 200 TPE → joint Newton through fifth order.
+fit = ptycho.find_aberrations(search="broad")   # Add broader fifth-order exploration.
 ```
 
 Use the returned fit for `fit.show("convergence")`,
-`ssb.reconstruct(fit, upsampling_factor="auto")`, and calibration export.
+`ptycho.run(fit, upsampling_factor="auto")`, and calibration export.
 Advanced notebooks expose the trial budget, refinement method and optional
 initial-only custom constraints (`search="primary"`). All models retain native
 fitting and Auto display sampling. Fitted high-order terms require physical validation.
