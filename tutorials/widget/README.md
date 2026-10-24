@@ -19,7 +19,8 @@ and a compact reconstructed focus gallery. Search ranges and known higher-order 
 ## Install
 
 Follow [setup/README.md](setup/README.md): Conda environments for MPS and CUDA,
-with editable library installs from `origin/main`. The setup guide records validation limitations.
+with editable library installs from the paired `oct-24-direct-iterative-api` branch.
+The setup guide records validation limitations.
 Agents should read [AGENTS.md](AGENTS.md) and the linked Widget/GPU API docs.
 
 ## Run

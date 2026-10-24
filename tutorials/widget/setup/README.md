@@ -1,6 +1,7 @@
 # Install and run
 
-Use clean checkouts of the QuantEM forks’ `origin/main` and editable installs.
+Use clean checkouts of the QuantEM forks’ `oct-24-direct-iterative-api` branch
+and editable installs. Use that same branch for the tutorials and both libraries.
 This is a development setup, not an RC release. No TestPyPI step is needed.
 
 `DirectPtycho` and `run()` require the paired source versions: GPU
@@ -13,11 +14,12 @@ these development versions do not imply a published package release.
 Install [Miniforge](https://github.com/conda-forge/miniforge#install), then run:
 
 ```bash
-git clone --branch main https://github.com/bobleesj/quantem-tutorials.git
+git clone --branch oct-24-direct-iterative-api https://github.com/bobleesj/quantem-tutorials.git
 cd quantem-tutorials/tutorials/widget
 ```
 
-The tutorials and both libraries use their forks’ `main` branches.
+The published packages and `main` branches do not yet provide this paired API.
+Do not substitute them for the branch used in this guide.
 
 ## 2. Choose your backend
 
@@ -46,8 +48,8 @@ From `tutorials/widget`, create source folders outside the tutorial repository:
 ```bash
 mkdir -p ../../../quantem-widget-sources
 cd ../../../quantem-widget-sources
-git clone --branch main https://github.com/bobleesj/quantem.gpu.git
-git clone --branch main https://github.com/bobleesj/quantem.widget.git
+git clone --branch oct-24-direct-iterative-api https://github.com/bobleesj/quantem.gpu.git
+git clone --branch oct-24-direct-iterative-api https://github.com/bobleesj/quantem.widget.git
 ```
 
 Run **one** installation command:
@@ -90,8 +92,12 @@ Save with Ctrl+S or Cmd+S; stop Jupyter with Ctrl+C in its terminal.
 From `quantem-widget-sources`, with the environment active:
 
 ```bash
-git -C quantem.gpu pull --ff-only origin main
-git -C quantem.widget pull --ff-only origin main
+git -C ../quantem-tutorials switch oct-24-direct-iterative-api
+git -C ../quantem-tutorials pull --ff-only origin oct-24-direct-iterative-api
+git -C quantem.gpu switch oct-24-direct-iterative-api
+git -C quantem.gpu pull --ff-only origin oct-24-direct-iterative-api
+git -C quantem.widget switch oct-24-direct-iterative-api
+git -C quantem.widget pull --ff-only origin oct-24-direct-iterative-api
 ```
 
 Repeat the backend installation command and widget build above. Restart the
